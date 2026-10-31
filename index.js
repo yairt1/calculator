@@ -14,8 +14,13 @@ function divide(num1, num2) {
   return num1 / num2;
 }
 
+function modulo(num1, num2) {
+  return num1 % num2;
+}
+
 const calculator = document.querySelector("#calculator");
 const display = calculator.querySelector("#display");
+const digits = [...calculator.querySelectorAll(".digit")];
 
 let value1;
 let value2;
@@ -29,11 +34,14 @@ function operate(operator, num1, num2) {
     case "-": {
       return subtract(num1, num2);
     }
-    case "*": {
+    case "×": {
       return multiply(num1, num2);
     }
-    case "/": {
+    case "÷": {
       return divide(num1, num2);
+    }
+    case "%": {
+      return modulo(num1, num2);
     }
   }
 }
