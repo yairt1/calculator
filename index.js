@@ -14,9 +14,12 @@ function divide(num1, num2) {
   return num1 / num2;
 }
 
-const value1 = document.querySelector("div");
-const value2 = document.querySelector("div");
-const operator = document.querySelector("div");
+const calculator = document.querySelector("#calculator");
+const display = calculator.querySelector("#display");
+
+let value1;
+let value2;
+let operator;
 
 function operate(operator, num1, num2) {
   switch (operator) {
